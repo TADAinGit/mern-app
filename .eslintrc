@@ -43,7 +43,7 @@
 				"singleQuote": true,
 				"trailingComma": "none",
 				"tabWidth": 4,
-				"endOfLine": "auto",
+				"endOfLine": "auto"
 			}
 		]
 	}
