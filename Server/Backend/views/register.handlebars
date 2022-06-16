@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/style1.css" type="text/css">
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<title> Đăng nhập hệ thống Ví Điện Tử </title>
+</head>
+
+<body>
+
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="/register" method="POST" enctype="multipart/form-data">
+			<h1>Tạo Tài Khoản</h1>
+			<input name="phoneNumber" type="number" placeholder="Số điện thoại" />
+			<input name="email" type="email" placeholder="Email" />
+            <input name="fullName" type="text" placeholder="Họ và tên" id="fullName" />
+            <input name="dateOfBirth" type="date" />
+            <input name="address" type="text" placeholder="Địa chỉ" />
+			<input type="file" name="imageCredentialFront" required />
+            <input type="file" name="imageCredentialBack" required /> 
+			<span id="messageMatch"> </span>
+			<button type="submit" name="submitRegister">Đăng Ký</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="/login" method="POST">
+			<h1 class="headerLogin">Đăng Nhập</h1>
+			<input name="userName" type="text" placeholder="Tên tài khoản" />
+			<input name="passWord" type="password" placeholder="Mật khẩu" />
+			<div class="passwordFind">
+			<a href="">Quên mật khẩu? </a>
+			<a href="">Thay đổi mật khẩu</a>
+			</div>
+			<button type="submit" name="submitLogin">Đăng Nhập</button>
+		</form>
+		
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Chào mừng đến với Ví Điện Tử ABCXYZ </h1>
+				<p>Để có thể sử dụng những chức năng, vui lòng đăng ký</p>
+				<button class="ghost" id="signIn">Đăng Nhập</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Xin chào</h1>
+				<p class="signUpIntroduction">Vui lòng đăng nhập để có thể thực hiện những chức năng trong hệ thống</p>
+				<button class="ghost" id="signUp">Đăng Ký</button>
+			</div>
+		</div>
+	</div>
+	
+	</body>
+	
+	<script>
+		const signUpButton = document.getElementById('signUp');
+		const signInButton = document.getElementById('signIn');
+		const container = document.getElementById('container');
+
+		signUpButton.addEventListener('click', () => 
+		{
+		    container.classList.add("right-panel-active");
+		});
+
+		signInButton.addEventListener('click', () => 
+		{
+		    container.classList.remove("right-panel-active");
+		});
+		
+		$('#password, #confirm_password').on('keyup', function () 
+		{
+			if ($('#password').val() == $('#confirm_password').val()) 
+			{
+				$('#messageMatch').html('Mật khẩu hợp lệ').css('color', 'green');
+			} 
+			else 
+			$('#messageMatch').html('Mật khẩu không khớp').css('color', 'red');
+		});
+		
+		
+	</script>
+</div>
+
+</html>

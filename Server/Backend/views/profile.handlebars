@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	
+    <title>Upgrade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" type="text/css">
+
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+	
+</head>
+
+<body class="acc">
+
+   
+   
+
+<div class="container">
+<div class="row gutters">
+	<div class="card-body">
+		<div class="row gutters">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<h6 class="mb-2 text-danger">Thông tin tài khoản</h6>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="fullName">Tên người dùng:</label>
+                    <p class="form-control"><strong> {{fullName}} </strong></p>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="phone">Email:</label>
+                    <p class="form-control"><strong> {{email}} </strong></p>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="address">Địa chỉ:</label>
+                    <p class="form-control"><strong> {{address}}</strong></p>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="email">Trạng thái tài khoản:</label>
+                    <p class="form-control"><strong> {{userStatus}} </strong></p>
+				</div>
+			</div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="phoneNumber">Số điện thoại:</label>
+                    <p class="form-control"><strong> {{phoneNumber}}</strong></p>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="email">Số dư tài khoản:</label>
+                    <p class="form-control"><strong> {{accountBalance}} </strong></p>
+				</div>
+			</div>
+		</div>
+
+    <form action="/profile/reUploadCredential" method="POST" enctype="multipart/form-data" >
+		<div class="row gutters">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<h6 class="mb-2 text-danger">Cập nhật chứng minh thư:</h6>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="form-group">
+					<label for="uploadCmtFront">Mặt trước:</label><br>
+					<input  class="border p-2" id="uploadCmtFront" type="file" name="imageCredentialFront" required>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="form-group">
+					<label for="uploadCmtBack">Mặt sau:</label><br>
+					<input class="border p-2" id="uploadCmtBack" type="file" name="imageCredentialBack" required>
+				</div>
+			</div>
+		</div>
+        <div class="row gutters">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="text-right">
+					<button type="submit" id="submitReuploadCredential" name="submitReuploadCredential" class="btn btn-danger">Cập nhật</button><br>
+					<h6 class="text-danger pt-2">*Lưu ý: Ảnh CMND từ tài khoản không hợp lệ, vui lòng upload lại ảnh để sử dụng toàn bộ tính năng từ hệ thống </h6>
+				</div>
+			</div>
+		</div>
+    </form>
+        
+		
+	</div>
+</div>
+</div>
+
+
+</body>
+</html>

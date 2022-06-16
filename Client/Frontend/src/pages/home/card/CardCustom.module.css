@@ -1,0 +1,62 @@
+.card {
+  position: relative;
+  width: 250px;
+  height: 215px;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+  background: #fff;
+  box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+}
+
+.card:hover {
+  height: 350px;
+}
+
+.imgBx {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 60px;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.2s;
+}
+
+.title {
+  /* text-transform: uppercase; */
+  transition-delay: 0.5s;
+  text-align: center;
+  transform: translateY(20px);
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card:hover .title {
+  visibility: hidden;
+  transition-delay: 0.2s;
+}

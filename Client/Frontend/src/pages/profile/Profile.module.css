@@ -1,0 +1,52 @@
+.container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px #333;
+    padding: 4px 8px 16px;
+    box-sizing: border-box;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.infoBox {
+    margin: 16px;
+    animation: fadeLeft 1s ease;
+}
+
+.infoLbl {
+    display: inline-block;
+    font-size: 20px
+}
+
+.infoInput {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    padding: 8px 8px 0;
+    font-size: 20px;
+}
+
+.infoInput:focus {
+    outline: 0;
+}
+
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
